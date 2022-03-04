@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body>
+
+<p>Select the scheme for Translation</p>
+<input type="radio" name="scheme" id="schemeTarget" onclick="myFunction()" value="Target2">Target2<input type="radio" name="scheme" id="schemeCBPR" onclick="myFunction()" value="CBPR">CBPR
+<br><br>
+<p>Select the input format</p>
+<input type="radio" name="inputType" id="iType" onclick="myFunction()" value="MT">MT<input type="radio" name="inputType" id="iType" onclick="myFunction()" value="MX">MX
+<br><br>
+<p>Select the input message type</p>
+<div id="CBPRMTDIV">
+  <select name="messageType" id="messageType">
+    <option value="volvo">103</option>
+    <option value="saab">202</option>
+    <option value="opel">202COV</option>  
+  </select>
+  <br><br>
+</div>
+<div id="TargetMTDIV">
+   <select name="messageType" id="messageType">
+    <option value="volvo">940</option>
+    <option value="saab">950</option>    
+  </select>
+  <br><br>
+</div>
+
+
+<script>
+  
+function myFunction() {
+  var x = document.getElementById("TargetMTDIV");
+  var y = document.getElementById("CBPRMTDIV");
+
+if (document.getElementById('schemeTarget').checked) {
+  sType = document.getElementById('schemeTarget').value;
+}else{
+sType = document.getElementById('schemeCBPR').value;
+}
+
+if (document.getElementById('schemeCBPR').checked) {
+  sType = document.getElementById('schemeCBPR').value;
+}else{
+sType = document.getElementById('schemeTarget').value;
+}
+
+  if (sType == "CBPR" ) {
+    x.style.display = "none";
+	y.style.display="block";
+  }
+    if (sType == "Target2" ) {
+    y.style.display = "none";
+	x.style.display="block";
+  }
+}
+
+
+</script>
+
+</body>
+</html>
+
