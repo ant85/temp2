@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sidebar Dashboard Template With Sub Menu</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+    </head>
+    <script>
+      //For Demo only
+var links = document.getElementsByClassName('link')
+for(var i = 0; i <= links.length; i++)
+   addClass(i)
+
+
+function addClass(id){
+   setTimeout(function(){
+      if(id > 0) links[id-1].classList.remove('hover')
+      links[id].classList.add('hover')
+   }, id*750) 
+}
+    </script>
+
+    <body>
+      <img src="nw.png"/>
+  
+     
+        <aside class="sidebar">
+          <nav class="nav">
+            <ul>
+              <li class="active"><a href="#">MT to MX Translation</a></li>
+              <li><a href="#">MX to MT Translation</a></li>
+              <li><a href="#">MX Validation</a></li>
+              <li><a href="#">MT Validation</a></li>
+            </ul>
+          </nav>
+        </aside>
+       
+       
+        <div class="group">
+          <input type="radio" name="rb" id="rb1" />
+          <label for="rb1">MEPS</label>
+          <input type="radio" name="rb" id="rb2" />
+          <label for="rb2">Target2</label>
+          <input type="radio" name="rb" id="rb3" />
+          <label for="rb3">CBPR+</label>
+        </div>
+
+
+        <textarea></textarea>
+        <div class="button-box">
+          <button class="button trigger">Translate</button>
+        </div>
+
+    </body>
+</html>
+      
